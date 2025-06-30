@@ -38,8 +38,8 @@ public class Main {
 
             System.out.println("Which User is accessing : ");
             String name = scanner.nextLine();
-            int id = findIndex(users,name);
-            System.out.println("Name : "+name+" Index : "+id);
+            int id = findIndex(users, name);
+            System.out.println("Name : " + name + " Index : " + id);
             choice = 0;
 
             System.out.println("1.Book Appointment 2.Cancel Appointment 0.Exit");
@@ -51,10 +51,9 @@ public class Main {
                     System.out.println("Enter Which batch you want to book appointment : ");
                     int slot = Integer.parseInt(scanner.nextLine());
 
-                    if(batches[slot - 1].spots>0 && users[id].bookSlot(name, slot)){
+                    if (batches[slot - 1].spots > 0 && users[id].bookSlot(name, slot)) {
                         batches[slot - 1].spots--;
-                    }
-                    else {
+                    } else {
                         System.out.println("You aldready Have booking.");
                     }
 
@@ -63,11 +62,10 @@ public class Main {
                     break;
 
                 case 2:
-                    if(users[id].bookedBatchIndex>0) {
+                    if (users[id].bookedBatchIndex > 0) {
                         batches[users[id].bookedBatchIndex - 1].spots++;
                         users[id].cancelSlot();
-                    }
-                    else
+                    } else
                         System.out.println("You have no present appointment");
                     break;
 
@@ -77,7 +75,7 @@ public class Main {
     }
 
 
-    public static int findIndex(User[] users , String name){
+    public static int findIndex(User[] users, String name) {
         for (int i = 0; i < users.length; i++) {
             if (users[i].name.equals(name)) {
                 return i; // Return the index if found
