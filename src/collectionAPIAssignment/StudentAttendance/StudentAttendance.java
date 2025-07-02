@@ -1,5 +1,5 @@
 //Assignment 1: Student Attendance Tracker (List)
-package collectionAPIAssignment;
+package collectionAPIAssignment.StudentAttendance;
 
 import java.util.ArrayList;
 

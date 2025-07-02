@@ -1,4 +1,4 @@
-package collectionAPIAssignment;
+package collectionAPIAssignment.StudentAttendance;
 
 public class Student{
     public int isPresent;

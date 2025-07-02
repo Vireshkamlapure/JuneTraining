@@ -1,4 +1,4 @@
-package collectionAPIAssignment;
+package collectionAPIAssignment.StudentAttendance;
 
 import java.util.Scanner;
 
