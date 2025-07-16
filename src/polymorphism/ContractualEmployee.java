@@ -1,0 +1,28 @@
+package polymorphism;
+
+public class ContractualEmployee extends Employee {
+    float basicSalary ;
+    float workHour;
+
+    ContractualEmployee(){
+        super();
+        System.out.println("Permanent Employee");
+    }
+
+    public ContractualEmployee(int id, String name, float basicSalary,float workHour) {
+        super(id, name);
+        this.basicSalary = basicSalary;
+        this.workHour = workHour;
+    }
+
+    void calculateSalary(){
+
+        salary = basicSalary * workHour;
+    }
+
+    void display(){
+        super.display();
+        System.out.println("Basic salary : " + basicSalary);
+        System.out.println("Work Hour : " + workHour);
+    }
+}
